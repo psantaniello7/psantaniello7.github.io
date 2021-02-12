@@ -1,6 +1,6 @@
-			import * as THREE from './libs/three/three.module.js';
+			import * as THREE from './three.module.js';
 			import {GLTFLoader} from'./GLTFLoader.js';
-			import {ARButton} from './libs/three/jsm/ARButton.js';
+			import {CanvasUI} from './libs/CanvasUI.js';
 
 			let container;
 			let camera, scene, renderer;
@@ -14,15 +14,21 @@
 			let uiButton;
 			let delta;
 			let overlay;
-			// let clip;
+			let threeDButton;
 			let mixer;
-			// let action;
+            let ui;
+			let workingMatrix = new THREE.Matrix4();
+			let raycaster = new THREE.Raycaster();
+            let self;
+
 
 			let hitTestSource = null;
 			let hitTestSourceRequested = false;
-
+            
+            
 			init();
 			animate();
+            
 
 			function init() {
 				clock = new THREE.Clock();
@@ -62,11 +68,16 @@
 
 					if ( reticle.visible ) {
 						loadModel();
+
 						
 
 					}
 
 				}
+
+				controller = renderer.xr.getController( 0 );
+				controller.addEventListener( 'select', onSelect );
+				scene.add( controller );
 
 				reticle = new THREE.Mesh(
 					new THREE.RingGeometry( 0.15, 0.2, 32 ).rotateX( - Math.PI / 2 ),
@@ -75,24 +86,54 @@
 				reticle.matrixAutoUpdate = false;
 				reticle.visible = false;
 				scene.add( reticle );
-				
-
 				//
+                createUI();
+                                console.log('button1');
+                ui.mesh.position.set(0, 0, -1);
+                console.log('button2');
+                camera.attach(ui.mesh);
+                ui.panelSize.width = 0.1;
+                ui.panelSize.height = 0.1;
+                console.log(ui.panelSize.width);
+                
+                ui.update();
 
 				window.addEventListener( 'resize', onWindowResize );
 
-
 			}
 
-			function tick() {
 
-				delta = clock.getDelta();
-			}
+            function createUI() {
+               const config = {
+            header:{
+                type: "text",
+                position:{ top:0 },
+                paddingTop: 30,
+                height: 70
+            },
+            main:{
+                type: "text",
+                position:{ top:70 },
+                height: 372, // default height is 512 so this is 512 - header height:70 - footer height:70
+                backgroundColor: "#bbb",
+                fontColor: "#000"
+            },
+            footer:{
+                type: "text",
+                position:{ bottom:0 },
+                paddingTop: 30,
+                height: 70
+            }
+        }
+        const content = {
+            header: "Header",
+            main: "This is the main text",
+            footer: "Footer"
+        }
+        ui = new CanvasUI( content, config ); 
 
-			function clicker() {
-				const button = document.getElementById('button');
-				button.textContent = "sdfds";
-			}
+              
+            }
 
 			function loadButtonUI (string) {
 
@@ -116,7 +157,6 @@
 						document.body.removeChild(uiButton);
 						unboxButtonUI('Unbox Product');
 				};
-				console.log("press");
 
 			}
 
@@ -170,10 +210,13 @@
 			}
 
 			async function loadModel() {
+				if (modelInScene == true) {
+					return;
+				}
 				const loader = new GLTFLoader();
 
 				const [modelData] = await Promise.all([
-					loader.loadAsync('/models/unbox_glb.glb'),
+					loader.loadAsync('./models/unbox_glb.glb'),
 					]);
 
 				
@@ -183,8 +226,8 @@
 				root.scale.y = 0.01;
 				root.scale.z = 0.01;
 
-				scene.add(root)	
-
+				scene.add(root)
+                createUI();
 				modelInScene = true;
 			}
 
@@ -206,7 +249,7 @@
 			}
 
 			function render( timestamp, frame ) {
-
+                if (renderer.xr.isPresenting){ui.update();}
 				if ( frame ) {
 
 					const referenceSpace = renderer.xr.getReferenceSpace();
@@ -245,13 +288,18 @@
 							if (unboxButtonInScene == true) {
 						reticle.visible = false;
 					} else {
-						reticle.visible = true;
-							reticle.matrix.fromArray( hit.getPose( referenceSpace ).transform.matrix );
-							loadButtonUI('Tap To Place');
+						if (modelInScene == false) {
+							reticle.visible = true;
+						reticle.matrix.fromArray( hit.getPose( referenceSpace ).transform.matrix );
+						} else {
+
+							reticle.visible = false;
+						}
+						
+							
+
+							
 					}
-							// reticle.visible = true;
-							// reticle.matrix.fromArray( hit.getPose( referenceSpace ).transform.matrix );
-							// loadButtonUI('Tap To Place');
 
 						} else {
 

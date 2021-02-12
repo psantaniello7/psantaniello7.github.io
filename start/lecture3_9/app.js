@@ -47,6 +47,7 @@ class App{
     
     setupXR(){
         
+        
         this.renderer.setAnimationLoop( this.render.bind(this) );
     }
     
