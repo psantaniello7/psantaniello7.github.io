@@ -17,11 +17,17 @@
   </head>
   <body>
     <ul id="messages"></ul>
+      <h3 id = "debug"> Hi There</h3>
     <form id="form" action="">
       <input id="input" autocomplete="off" /><button>Send</button>
     </form>
       <script src = "/socket.io/socket.io.js"></script>
       <script>
-      var socket = io()</script>
+      var socket = io()
+      
+      socket.on('connect', () => {
+          document.getElementById('debug').innerHTML = "Connected";
+      })
+      </script>
   </body>
 </html>
