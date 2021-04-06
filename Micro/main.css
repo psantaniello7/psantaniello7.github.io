@@ -35,9 +35,6 @@
 #iframeControls {
   display: none;
   position: absolute;
-/*  height: 100%;
-  width: 98vw;*/
-/*  left: 50%;*/
   bottom: 0;
   right:0;
   top:0;
@@ -262,7 +259,7 @@ p {
   #stopBtn {
     position: absolute;
     top: 25%;
-    right: 2.5vmax;
+    right: 2vmax;
     transform: translateY(-50%);
   }
 }
