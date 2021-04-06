@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Demo PDP Page</title>
+		<meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <!-- Needed for outer website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script src="//cdn.8thwall.com/web/iframe/iframe.js"></script>
+    
+    <!-- Needed for outer website -->
+	</head>
+	<body>
+    <!-- Needed for outer website -->
+    <div id="inline-ar">
+      <button id="startBtn" onClick="startAR()">
+        <img src="./assets/start-ar-banner.svg">
+      </button>
+     
+      <div id="iframeControls">
+        <button id="expandBtn" onClick="toggleFullscreen()">
+          <div id="expandImg"></div>
+        </button>
+        <button id="stopBtn" onClick="stopAR()">
+          <div id="stopImg"></div>
+        </button>
+      </div>
+      <iframe
+        id="my-iframe"
+        allow="camera;microphone;gyroscope;accelerometer;">
+      </iframe>
+    </div>
+    <!-- Needed for outer website -->
+    <!-- AR Button Script -->
+    <script src="scripts/ar-button.js"></script>
+    <!-- AR Button Script -->
+	</body>
+</html>
