@@ -1,5 +1,5 @@
 
-const INNER_FRAME_URL = 'https://infovisioninc.staging.8thwall.app/vz-micro-experience'
+const INNER_FRAME_URL = 'https://infovisioninc.8thwall.app/vz-micro-experience'
 
 // User control elements for the iframe AR experience.
 const IFRAME_ID = 'my-iframe'  // iframe containing AR content.
@@ -13,11 +13,12 @@ const EXPAND_BTN_ID = 'expandBtn'  // Button to expand AR iframe to fill screen.
 // CSS classes for toggling appearance of elements when the iframe is full screen.
 const FULLSCREEN_IFRAME_CLASS = 'fullscreen-iframe'
 const FULLSCREEN_CONTROLS_CLASS = 'fullscreen-iframeControls'
-const FULLSCREEN_EXPAND_BTN_CLASS = 'fullscreen-btn'
-const FULLSCREEN_STOP_BTN_CLASS = 'hidden'
+const FULLSCREEN_EXPAND_BTN_CLASS = 'hidden'
+const FULLSCREEN_STOP_BTN_CLASS = 'fullscreen-stop-btn'
 
 // Handles stop AR button behavior; also called when scrolled away from active AR iframe.
 const stopAR = () => {
+  toggleFullscreen()
   // deregisters the XRIFrame
   window.XRIFrame.deregisterXRIFrame()
 
@@ -128,6 +129,8 @@ const startAR = () => {
   })
 
   iframe.setAttribute('src', INNER_FRAME_URL)  // This is where the AR iframe's source is set.
+
+  toggleFullscreen()
 }
 
 // Set up.

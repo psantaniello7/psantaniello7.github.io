@@ -35,7 +35,7 @@
 #iframeControls {
   display: none;
   position: absolute;
-  height: 7em;
+  height: 100%;
   width: 98vw;
   left: 50%;
   z-index: 1;
@@ -43,13 +43,11 @@
 }
 
 #stopBtn {
-  margin-top: 1em;
-  margin-left: 1em;
-  float: left;
   border: 0;
   background: none;
   padding: 0;
 }
+
 
 #stopBtn:focus {
   outline: none !important; 
@@ -57,11 +55,12 @@
 }
 
 #stopImg {
-  width: 30px;
-  height: 30px;
-  background-image: url(./assets/close-icon.svg);
-  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
-  background-size: cover;
+  width: 15vmin;
+  height: 15vmin;
+  background-image: url(./assets/close.png);
+  background-size: 100%;
+  background-color: black;
+  border-radius: 7.5vmin;
 }
 
 #expandBtn {
@@ -112,6 +111,11 @@
   margin: 0;
   top: 1em;
   right: 0;
+}
+
+.fullscreen-stop-btn {
+  position: absolute;
+
 }
 
 .fullscreen-btn #expandImg {
@@ -239,6 +243,24 @@ p {
 
 .prompt-button-8w-iframe {
   border-radius: 10px !important;
+}
+
+@media all and (orientation:portrait) {
+  #stopBtn {
+    position: absolute;
+    bottom: 2.5vmax;
+    left: 75%;
+    transform: translateX(-50%);
+  }
+}
+
+@media all and (orientation:landscape) {
+  #stopBtn {
+    position: absolute;
+    top: 25%;
+    right: 2.5vmax;
+    transform: translateY(-50%);
+  }
 }
 
 .bg {
