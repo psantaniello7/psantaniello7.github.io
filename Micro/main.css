@@ -40,19 +40,21 @@
   top:0;
   left:0;
   z-index: 1;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 #stopBtn {
   border: 0;
   background: none;
   padding: 0;
+  pointer-events: auto;
 }
 
 
 #stopBtn:focus {
   outline: none !important; 
   box-shadow: none !important;
+  pointer-events: auto;
 }
 
 #stopImg {
