@@ -39,8 +39,8 @@
   right:0;
   top:0;
   left:0;
-  z-index: 15;
-  pointer-events: none;
+  z-index: 1;
+  pointer-events: auto;
 }
 
 #stopBtn {
@@ -265,7 +265,7 @@ p {
 }
 
 .bg {
-    z-index: 0;
+    /*z-index: 0;*/
   /* The image used */
   background-image: url("./assets/page.png");
 
