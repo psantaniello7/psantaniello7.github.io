@@ -1,5 +1,3 @@
-
-// const INNER_FRAME_URL = 'https://infovisioninc.8thwall.app/inner-iframe-tryon'
 const INNER_FRAME_URL = 'https://infovisioninc.staging.8thwall.app/vz-micro-experience'
 
 // User control elements for the iframe AR experience.
