@@ -54,7 +54,6 @@
 #stopBtn:focus {
   outline: none !important; 
   box-shadow: none !important;
-  pointer-events: auto;
 }
 
 #stopImg {
