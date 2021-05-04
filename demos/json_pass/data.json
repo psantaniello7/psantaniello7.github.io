@@ -1,0 +1,45 @@
+{
+"brandName": "Apple",
+  "defaultSKU": "MWKP2LL/A",
+  "description": "Meet iPhone 12 Pro",
+  "parentCategories": [
+    "cat120001",
+    "cat180001",
+    "cat180004",
+    "cat2570002",
+    "cat10066"
+  ],
+  "productId": "dev12360040",
+  "productDisplayName": "iPhone 12 Pro",
+  "childSkus": [
+    {
+      "color": "Silver",
+      "colorStyle": {
+        "colorCssStyle": "#000000",
+        "colorId": "clr40003",
+        "description": "Silver",
+        "displayName": "Silver"
+      },
+      "skus": [
+        {
+          "color": {
+            "colorCssStyle": "#000000",
+            "colorId": "clr40003",
+            "description": "Silver",
+            "displayName": "Silver"
+          },
+          "inventoryDetails": {
+            "dFillInventory": null
+          },
+          "skuDisplayName": "Apple iPhone 12 Pro 128GB in Silver",
+          "skuId": "sku4120122",
+          "sorId": "MWKP2LL/A",
+          "skuFilters": {
+            "deviceFilterType": "Smartphones"
+          }
+          
+        }
+       ]
+    }
+   ]
+}

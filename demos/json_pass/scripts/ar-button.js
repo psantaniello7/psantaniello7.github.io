@@ -1,4 +1,4 @@
-const INNER_FRAME_URL = 'https://infovisioninc.8thwall.app/inner-iframe-tryon'
+const INNER_FRAME_URL = './ar/index.html'
 
 // User control elements for the iframe AR experience.
 const IFRAME_ID = 'my-iframe'  // iframe containing AR content.
