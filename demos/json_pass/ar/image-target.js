@@ -1,4 +1,4 @@
-const imageTrackingComponent = () => ({
+AFRAME.registerComponent('image-taret', {
 
   schema: {
     name: {type: 'string'},
@@ -78,5 +78,3 @@ const imageTrackingComponent = () => ({
   },
 
 })
-
-export {imageTrackingComponent}

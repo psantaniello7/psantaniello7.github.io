@@ -1,4 +1,4 @@
-const photoModeComponent = () => ({
+AFRAME.registerComponent('photo-mode', {
 
   init() {
     const container = document.getElementById('photoModeContainer')
@@ -63,5 +63,3 @@ const photoModeComponent = () => ({
     target.appendChild(phone)
   },
 })
-
-export {photoModeComponent}

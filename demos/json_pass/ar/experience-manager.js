@@ -1,4 +1,4 @@
-const managerComponent = () => ({
+AFRAME.registerComponent('experience-manager', {
   init() {
     const photoModeContainer = document.getElementById('photoModeContainer')
     const mainUIContainer = document.getElementById('mainUIContainer')
@@ -17,4 +17,3 @@ const managerComponent = () => ({
   },
 })
 
-export {managerComponent}

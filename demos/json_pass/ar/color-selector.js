@@ -1,4 +1,4 @@
-const colorSelectComponent = () => ({
+AFRAME.registerComponent('color-selector', {
   schema: {
     bodyColors: {type: 'array'},
     buttonRGB: {type: 'array'},
@@ -54,5 +54,3 @@ const colorSelectComponent = () => ({
   },
 
 })
-
-export {colorSelectComponent}
