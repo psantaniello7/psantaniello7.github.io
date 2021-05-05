@@ -54,7 +54,7 @@ AFRAME.registerComponent('photo-mode', {
     phone.setAttribute('rotation', '0 180 -90')
     phone.setAttribute('position', '1 0 0')
     phone.setAttribute('color-selector', {
-      bodyColors: 'blue, gold, graphite, silver',
+      bodyColors: 'Blue, Gold, Graphite, Silver',
       buttonRGB: '(45 78 92), (252 235 211), (82 81 77), (230 231 226)',
       body: 'iphone12_pro_Body',
     })
