@@ -139,12 +139,12 @@ const startAR = () => {
   })
   
   iframe.setAttribute('src', INNER_FRAME_URL)  // This is where the AR iframe's source is set.
-  // iframe.addEventListener('load', function() {
-  //   // setTimeout(() => {
-  //   //   iframe.contentWindow.postMessage(thismessage,'*')
-  //   //   thismessage = null
-  //   // }, 5000)
-  // })
+  iframe.addEventListener('load', function() {
+    setTimeout(() => {
+      iframe.contentWindow.postMessage(thismessage,'*')
+      thismessage = null
+    }, 5000)
+  })
 
   toggleFullscreen()
 }
