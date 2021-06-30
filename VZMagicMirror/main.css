@@ -301,7 +301,7 @@ p {
   max-height: 100%;
 }
 
-@media screen and (min-width: 1198px) {
+@media screen and (min-width: 981px) {
   #inline-ar {
     display: block;
     margin: 0 auto;
