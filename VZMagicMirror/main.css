@@ -26,7 +26,7 @@
   width: 7vmin;
   position: absolute;
   top: 1.5vmin;
-  left: 1.5vmin;
+  right: 1.5vmin;
   background-image:  url('./assets/Buttons/logo.png');
   background-size: 100%;
   background-position: center center;
@@ -128,9 +128,9 @@
 }
 
 #stopBtn {
-  position: absolute;
+  position: fixed;
   top: 0%;
-  right: 5%;
+  left: 5%;
   border: 0;
   height: 15vmin;
   background: none;
@@ -140,15 +140,15 @@
 }
 
 
-#stopBtn:focus {
+/*#stopBtn:focus {
   position: absolute;
   top: 0%;
-  right: 5%;
+  left: 5%;
   outline: none !important; 
   box-shadow: none !important;
   pointer-events: auto;
 
-}
+}*/
 
 #stopImg {
   width: 15vmin;
@@ -339,15 +339,6 @@ p {
 
 .prompt-button-8w-iframe {
   border-radius: 10px !important;
-}
-
-@media all and (orientation:portrait) {
-  #stopBtn {
-    position: absolute;
-    bottom: 2.5vmax;
-    left: 75%;
-    transform: translateX(-50%);
-  }
 }
 
 @media all and (orientation:landscape) {
