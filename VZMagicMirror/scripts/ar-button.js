@@ -22,7 +22,7 @@ thismessage = null
 
 // Handles stop AR button behavior; also called when scrolled away from active AR iframe.
 const stopAR = () => {
-  thismessage = null
+  
   toggleFullscreen()
   // deregisters the XRIFrame
   window.XRIFrame.deregisterXRIFrame()
