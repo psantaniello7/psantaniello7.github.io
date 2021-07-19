@@ -1,0 +1,277 @@
+{
+  "brands":{
+    "Apple": {
+      "iPhone12Pro": {
+        "deviceName": "iPhone12Pro",
+        "model3d": "./assets/models/iphone/iphone12_pro.glb",
+        "colors": [
+          {
+            "PacificBlue": {
+              "sku": "111111",
+              "name": "Pacific Blue",
+              "texture": "./assets/deviceTextures/iphone/blue.png",
+              "rgbValues": "(45 78 92)",
+              "hexValue": "#2D4E5C"
+            }
+          },
+          {
+            "Gold": {
+              "sku": "111111",
+              "name": "Gold",
+              "texture": "./assets/deviceTextures/iphone/gold.png",
+              "rgbValues": "(252 235 211)",
+              "hexValue": "#FCEBD3"
+            }
+          },
+          {
+            "Graphite": {
+              "sku": "111111",
+              "name": "Graphite",
+              "texture": "./assets/deviceTextures/iphone/graphite.png",
+              "rgbValues": "(82 81 77)",
+              "hexValue": "#52514D"
+            }
+          },
+          {
+            "Silver": {
+              "sku": "111111",
+              "name": "Silver",
+              "texture": "./assets/deviceTextures/iphone/silver.png",
+              "rgbValues": "(230 231 226)",
+              "hexValue": "#E6E7E2"
+            }
+          }
+        ],
+        "defaultColor": "PacificBlue",
+        "animations": [
+          
+        ],
+        "bodyMesh": "Body",
+        "screenMesh": "BodyScreen",
+        "videoMesh": "Screen",
+        "promoVideo": "https://ss7.vzw.com/is/content/VerizonWireless/Catalog%20Assets/Devices/Apple/iphone-12/apple-iphone-12-phone-video-10162020.mp4",
+        "screenImages": [
+          "./assets/Image_0.png",
+          "./assets/Image_1.png",
+          "./assets/Image_2.png",
+          "./assets/Image_3.png",
+          "./assets/Image_4.png"
+        ]
+      }
+    },
+    "Samsung": {
+      "GalaxyS21": {
+        "deviceName": "galaxyS21",
+        "model3d": "./assets/models/samsung/SamsungS21.glb",
+        "colors": [
+          {
+            "MysticBronze": {
+              "sku": "111111",
+              "name": "Mystic Bronze",
+              "texture": "./assets/deviceTextures/zfold/bronze.jpg",
+              "rgbValues": "(154, 114, 111)",
+              "hexValue": "#9a726f"
+            }
+          },
+          {
+            "Mystic Gold": {
+              "sku": "111111",
+              "name": "Mystic Gold",
+              "texture": "./assets/deviceTextures/samsung/gold.jpg",
+              "rgbValues": "(154, 114, 111)",
+              "hexValue": "#9a726f"
+            }
+          },
+          {
+            "MysticGray": {
+              "sku": "111111",
+              "name": "Mystic Gray",
+              "texture": "./assets/deviceTextures/zfold/gray.jpg",
+              "rgbValues": "(86 79 85)",
+              "hexValue": "#564f55"
+            }
+          }
+        ],
+        "defaultColor": "MysticBronze",
+        "animations": [
+          
+        ],
+        "bodyMesh": "Body",
+        "screenMesh": "BodyScreen",
+        "videoMesh": "Screen",
+        "promoVideo": "https://ss7.vzw.com/is/content/VerizonWireless/Catalog%20Assets/Devices/Samsung/Palette/s1-ultra-5g-video-01272021.mp4",
+        "screenImages": [
+          "./assets/Image_0.png",
+          "./assets/Image_1.png",
+          "./assets/Image_2.png",
+          "./assets/Image_3.png",
+          "./assets/Image_4.png"
+        ]
+      },
+      "GalaxyA002": {
+        "deviceName": "galaxyA002",
+        "model3d": "./assets/models/samsung/SamsungA002.glb",
+        "colors": [
+          {
+            "MysticBronze": {
+              "sku": "111111",
+              "name": "Mystic Bronze",
+              "texture": "./assets/deviceTextures/zfold/bronze.jpg",
+              "rgbValues": "(154, 114, 111)",
+              "hexValue": "#9a726f"
+            }
+          },
+          {
+            "MysticGray": {
+              "sku": "111111",
+              "name": "Mystic Gray",
+              "texture": "./assets/deviceTextures/zfold/gray.jpg",
+              "rgbValues": "(86 79 85)",
+              "hexValue": "#564f55"
+            }
+          }
+        ],
+        "defaultColor": "MysticBronze",
+        "animations": [
+          
+        ],
+        "bodyMesh": "Body",
+        "screenMesh": "BodyScreen",
+        "videoMesh": "Screen",
+        "promoVideo": null,
+        "screenImages": [
+          "./assets/Image_0.png",
+          "./assets/Image_1.png",
+          "./assets/Image_2.png",
+          "./assets/Image_3.png",
+          "./assets/Image_4.png"
+        ]
+      },
+      "GalaxyA12": {
+        "deviceName": "galaxyA12",
+        "model3d": "./assets/models/samsung/SamsungA12.glb",
+        "colors": [
+          {
+            "MysticBronze": {
+              "sku": "111111",
+              "name": "Mystic Bronze",
+              "texture": "./assets/deviceTextures/zfold/bronze.jpg",
+              "rgbValues": "(154, 114, 111)",
+              "hexValue": "#9a726f"
+            }
+          },
+          {
+            "MysticGray": {
+              "sku": "111111",
+              "name": "Mystic Gray",
+              "texture": "./assets/deviceTextures/zfold/gray.jpg",
+              "rgbValues": "(86 79 85)",
+              "hexValue": "#564f55"
+            }
+          }
+        ],
+        "defaultColor": "MysticBronze",
+        "animations": [
+          
+        ],
+        "bodyMesh": "Body",
+        "screenMesh": "BodyScreen",
+        "videoMesh": "Screen",
+        "promoVideo": "https://ss7.vzw.com/is/content/VerizonWireless/Catalog%20Assets/Devices/Samsung/galaxy-a12/samsung-galaxy-a12-overview-hd-verizon-music.mp4",
+        "screenImages": [
+          "./assets/Image_0.png",
+          "./assets/Image_1.png",
+          "./assets/Image_2.png",
+          "./assets/Image_3.png",
+          "./assets/Image_4.png"
+        ]
+      },
+      "GalaxyA42": {
+        "deviceName": "galaxyA42",
+        "model3d": "./assets/models/samsung/SamsungA42.glb",
+        "colors": [
+          {
+            "MysticBronze": {
+              "sku": "111111",
+              "name": "Mystic Bronze",
+              "texture": "./assets/deviceTextures/zfold/bronze.jpg",
+              "rgbValues": "(154, 114, 111)",
+              "hexValue": "#9a726f"
+            }
+          },
+          {
+            "MysticGray": {
+              "sku": "111111",
+              "name": "Mystic Gray",
+              "texture": "./assets/deviceTextures/zfold/gray.jpg",
+              "rgbValues": "(86 79 85)",
+              "hexValue": "#564f55"
+            }
+          }
+        ],
+        "defaultColor": "MysticBronze",
+        "animations": [
+          
+        ],
+        "bodyMesh": "Body",
+        "screenMesh": "BodyScreen",
+        "videoMesh": "Screen",
+        "promoVideo": "https://ss7.vzw.com/is/content/VerizonWireless/Catalog%20Assets/Devices/Samsung/Galaxy-A42-5G/samsung-galaxy-a42-5g-overview-hd-verizon-music.mp4",
+        "screenImages": [
+          "./assets/Image_0.png",
+          "./assets/Image_1.png",
+          "./assets/Image_2.png",
+          "./assets/Image_3.png",
+          "./assets/Image_4.png"
+        ]
+      },
+      "GalaxyZFlip": {
+        "deviceName": "galaxyZFlip",
+        "model3d": "./assets/models/samsung/SamsungZflip.glb",
+        "colors": [
+          {
+            "MysticBronze": {
+              "sku": "111111",
+              "name": "Mystic Bronze",
+              "texture": "./assets/deviceTextures/zfold/bronze.jpg",
+              "rgbValues": "(154, 114, 111)",
+              "hexValue": "#9a726f"
+            }
+          },
+          {
+            "MysticGray": {
+              "sku": "111111",
+              "name": "Mystic Gray",
+              "texture": "./assets/deviceTextures/zfold/gray.jpg",
+              "rgbValues": "(86 79 85)",
+              "hexValue": "#564f55"
+            }
+          }
+        ],
+        "defaultColor": "MysticBronze",
+        "animations": [
+          "CloseHalf",
+          "CloseFull",
+          "OpenHalf",
+          "OpenFull"
+        ],
+        "bodyMesh": "Body",
+        "screenMesh": "BodyScreen",
+        "videoMesh": "Screen",
+        "promoVideo": "https://ss7.vzw.com/is/content/VerizonWireless/2021/UHP/uhp-hero-p-d-060121.mp4",
+        "screenImages": [
+          "./assets/Image_0.png",
+          "./assets/Image_1.png",
+          "./assets/Image_2.png",
+          "./assets/Image_3.png",
+          "./assets/Image_4.png"
+        ]
+      }
+    }
+  },
+  "wallpapers": [
+    "./assets/images/wallpapers/iphone-wallpaper1.png",
+    "./assets/images/wallpapers/iphone-wallpaper2.png",
+    "./assets/images/wallpapers/iphone-wallpaper3.jpg"
+  ]
+}
