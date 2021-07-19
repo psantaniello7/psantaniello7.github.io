@@ -1,0 +1,266 @@
+{
+  "iphone": {
+    "brandName": "Apple",
+    "defaultSKU": "MWKP2LL/A",
+    "description": "Meet Galazy Z Fold",
+    "parentCategories": [
+      "cat120001",
+      "cat180001",
+      "cat180004",
+      "cat2570002",
+      "cat10066"
+    ],
+    "productId": "dev12360040",
+    "productDisplayName": "iPhone 12 Pro",
+    "childSkus": [
+      {
+        "color": "Pacific Blue",
+        "colorStyle": {
+          "colorCssStyle": "#000000",
+          "colorId": "clr40003",
+          "description": "Mystic Bronze",
+          "displayName": "Mystic Bronze"
+        },
+        "skus": [
+          {
+            "color": {
+              "colorCssStyle": "#000000",
+              "colorId": "clr40003",
+              "description": "Mystic Bronze",
+              "displayName": "Mystic Bronze"
+            },
+            "inventoryDetails": {
+              "dFillInventory": null
+            },
+            "skuDisplayName": "Samsung Galaxy Z Fold 64GB in Mystic Bronze",
+            "skuId": "sku4120122",
+            "sorId": "MWKP2LL/A",
+            "skuFilters": {
+              "deviceFilterType": "Smartphones"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "s21": {
+    "brandName": "Samsung",
+    "defaultSKU": "MWKP2LL/A",
+    "description": "Meet Galazy Z Fold",
+    "parentCategories": [
+      "cat120001",
+      "cat180001",
+      "cat180004",
+      "cat2570002",
+      "cat10066"
+    ],
+    "productId": "dev12360040",
+    "productDisplayName": "Galaxy S21",
+    "childSkus": [
+      {
+        "color": "Pacific Blue",
+        "colorStyle": {
+          "colorCssStyle": "#000000",
+          "colorId": "clr40003",
+          "description": "Mystic Bronze",
+          "displayName": "Mystic Bronze"
+        },
+        "skus": [
+          {
+            "color": {
+              "colorCssStyle": "#000000",
+              "colorId": "clr40003",
+              "description": "Mystic Bronze",
+              "displayName": "Mystic Bronze"
+            },
+            "inventoryDetails": {
+              "dFillInventory": null
+            },
+            "skuDisplayName": "Samsung Galaxy Z Fold 64GB in Mystic Bronze",
+            "skuId": "sku4120122",
+            "sorId": "MWKP2LL/A",
+            "skuFilters": {
+              "deviceFilterType": "Smartphones"
+            }
+          }
+        ]
+      }
+    ]
+  },
+"a12": {
+    "brandName": "Samsung",
+    "defaultSKU": "MWKP2LL/A",
+    "description": "Meet Galazy Z Fold",
+    "parentCategories": [
+      "cat120001",
+      "cat180001",
+      "cat180004",
+      "cat2570002",
+      "cat10066"
+    ],
+    "productId": "dev12360040",
+    "productDisplayName": "Galaxy A12",
+    "childSkus": [
+      {
+        "color": "Pacific Blue",
+        "colorStyle": {
+          "colorCssStyle": "#000000",
+          "colorId": "clr40003",
+          "description": "Mystic Bronze",
+          "displayName": "Mystic Bronze"
+        },
+        "skus": [
+          {
+            "color": {
+              "colorCssStyle": "#000000",
+              "colorId": "clr40003",
+              "description": "Mystic Bronze",
+              "displayName": "Mystic Bronze"
+            },
+            "inventoryDetails": {
+              "dFillInventory": null
+            },
+            "skuDisplayName": "Samsung Galaxy Z Fold 64GB in Mystic Bronze",
+            "skuId": "sku4120122",
+            "sorId": "MWKP2LL/A",
+            "skuFilters": {
+              "deviceFilterType": "Smartphones"
+            }
+          }
+        ]
+      }
+    ]
+  },
+"a42": {
+    "brandName": "Samsung",
+    "defaultSKU": "MWKP2LL/A",
+    "description": "Meet Galazy Z Fold",
+    "parentCategories": [
+      "cat120001",
+      "cat180001",
+      "cat180004",
+      "cat2570002",
+      "cat10066"
+    ],
+    "productId": "dev12360040",
+    "productDisplayName": "Galaxy A42",
+    "childSkus": [
+      {
+        "color": "Pacific Blue",
+        "colorStyle": {
+          "colorCssStyle": "#000000",
+          "colorId": "clr40003",
+          "description": "Mystic Bronze",
+          "displayName": "Mystic Bronze"
+        },
+        "skus": [
+          {
+            "color": {
+              "colorCssStyle": "#000000",
+              "colorId": "clr40003",
+              "description": "Mystic Bronze",
+              "displayName": "Mystic Bronze"
+            },
+            "inventoryDetails": {
+              "dFillInventory": null
+            },
+            "skuDisplayName": "Samsung Galaxy Z Fold 64GB in Mystic Bronze",
+            "skuId": "sku4120122",
+            "sorId": "MWKP2LL/A",
+            "skuFilters": {
+              "deviceFilterType": "Smartphones"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "zflip": {
+    "brandName": "Samsung",
+    "defaultSKU": "MWKP2LL/A",
+    "description": "Meet Galazy Z Flip",
+    "parentCategories": [
+      "cat120001",
+      "cat180001",
+      "cat180004",
+      "cat2570002",
+      "cat10066"
+    ],
+    "productId": "dev12360040",
+    "productDisplayName": "Galaxy Z Flip",
+    "childSkus": [
+      {
+        "color": "Pacific Blue",
+        "colorStyle": {
+          "colorCssStyle": "#000000",
+          "colorId": "clr40003",
+          "description": "Mystic Bronze",
+          "displayName": "Mystic Bronze"
+        },
+        "skus": [
+          {
+            "color": {
+              "colorCssStyle": "#000000",
+              "colorId": "clr40003",
+              "description": "Mystic Bronze",
+              "displayName": "Mystic Bronze"
+            },
+            "inventoryDetails": {
+              "dFillInventory": null
+            },
+            "skuDisplayName": "Samsung Galaxy Z Fold 64GB in Mystic Bronze",
+            "skuId": "sku4120122",
+            "sorId": "MWKP2LL/A",
+            "skuFilters": {
+              "deviceFilterType": "Smartphones"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "a002": {
+    "brandName": "Samsung",
+    "defaultSKU": "MWKP2LL/A",
+    "description": "Meet Galazy Z Fold",
+    "parentCategories": [
+      "cat120001",
+      "cat180001",
+      "cat180004",
+      "cat2570002",
+      "cat10066"
+    ],
+    "productId": "dev12360040",
+    "productDisplayName": "Galaxy A002",
+    "childSkus": [
+      {
+        "color": "Pacific Blue",
+        "colorStyle": {
+          "colorCssStyle": "#000000",
+          "colorId": "clr40003",
+          "description": "Mystic Bronze",
+          "displayName": "Mystic Bronze"
+        },
+        "skus": [
+          {
+            "color": {
+              "colorCssStyle": "#000000",
+              "colorId": "clr40003",
+              "description": "Mystic Bronze",
+              "displayName": "Mystic Bronze"
+            },
+            "inventoryDetails": {
+              "dFillInventory": null
+            },
+            "skuDisplayName": "Samsung Galaxy Z Fold 64GB in Mystic Bronze",
+            "skuId": "sku4120122",
+            "sorId": "MWKP2LL/A",
+            "skuFilters": {
+              "deviceFilterType": "Smartphones"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

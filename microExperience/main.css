@@ -1,1026 +1,296 @@
-
-@import url(//respframework.verizon.com/fonts/v2/fonts.css);
-
-#onScreenUIContainer {
-  position: absolute;
-  bottom: 0;
-  right:0;
-  top:0;
-  left:0;
-  z-index: 10;
-  pointer-events: none;
-}
-
-#infoContainer {
-  position: absolute;
-  bottom: 0;
-  right:0;
-  top:0;
-  left:0;
-  z-index: 10;
-  pointer-events: none;  
-}
-
-
-#helpBackgroundImage {
-  background-image: url('./assets/images/UI/panel1.png');
-  position: absolute;
+/* iframe styling */
+#my-iframe {
   width: 100%;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-  background-size: 100%;
-  background-color: #191919;
-  background-position: center center;
-  opacity:0.95;
+  height: 0px;
+  margin: 0 auto;
+  border: 0;
+  background-size: cover; 
+  background-color: black;
 }
 
-/*
-#flash {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background-color: white;
-  z-index: 10;
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.flash #flash {
-  opacity: 1;
-  transition: 0s;
-  pointer-events: auto;
-}
-
-
-#shutterButton{
-  position: absolute;
-  width: 15vmin;
+#startBtn {
+/*  position: absolute;
+  z-index: 1; 
+  left: 55%;
+  bottom: -140vmin;
   height: 15vmin;
-  background-color: white;
-  bottom: 2vmax;
-  border-radius: 7.5vmin;
-  left: 50%;
-  transform: translateX(-50%);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  pointer-events: auto;
-}
-
-#closeButton{
-  position: absolute;
   width: 15vmin;
-  height: 15vmin;
-  background-color: white;
-  bottom: 2vmax;
-  border-radius: 7.5vmin;
-  left: 25%;
   transform: translateX(-50%);
-  background-size: 100%;
+  margin-top: 42%;
+  border: 0;
+  background-image: url('./assets/start-ar.png');
+  border-radius: 15px;
+  padding: 3px 0px 0px 3px;
+  background-position: center left;
   background-repeat: no-repeat;
-  background-position: center center;
-  pointer-events: auto;
+  color: black;
+  text-align: center;
+  font-size: 5vmin;
+  text-decoration: underline;
+  width: 50%;*/
 }
 
-#confirmButton {
-  position: absolute;
-  width: 45vmin;
-  height: 10vmin;
-  background-color: white;
-  bottom: 3vmax;
-  border-radius: 7.5vmin;
-  left: 65%;
-  transform: translateX(-50%);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  pointer-events: auto;
-}
-*/
-
-#defaultInfo {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  background-color: #191919;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 20%;
-  pointer-events: auto;
+#startBtn img {
+  margin: 10px 20px;
 }
 
-#inHandInfo {
+#startBtn:focus {
+  outline: none !important; 
+  box-shadow: none !important;
+}
+
+#iframeControls {
+  display: none;
   position: absolute;
   bottom: 0;
   right:0;
   top:0;
   left:0;
-  z-index: 13;
-  background-color: #191919;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  pointer-events: auto;
-}
-
-.helpText{
-  margin-top:0;
-  margin-left:10vmin;
-  color:#FFF;
-  font-family: 'BrandFont-Text';
-  font-weight: bold;
- /*font-size: 1.2em;*/
-}
-
-.continueButton{
-  background-image: url('./assets/images/UI/Continue_Btn3x.png');
-  
-  z-index:13;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-#infoButton {
-  background-image: url('./assets/images/UI/HowTo3x.png');
-  position: absolute;
-  width: 16vmin;
-  height: 5vmin;
-  z-index:13;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  pointer-events: auto;
-}
-
-.flipButton.show #inSpaceButton.show, #inHandButton.show, #whiteLine.show, #colorText.show, #infoButton.show, #playVideoButtonText.show{
-  animation: fadeInFromNone 0.5s ease-in;
-}
-.flipButton.hide #inSpaceButton.hide, #inHandButton.hide, #whiteLine.hide, #colorText.hide, #infoButton.hide, #playVideoButtonText.hide{
-  opacity: 0;
-}
-
-
-#expandButton {
-  background-image: url('./assets/images/UI/Icon_Caret_Down3x.png');
-  position: absolute;
-  /*top:0;*/
-  /*left: 50%;*/
-  width: 10vmin;
-  height: 10vmin;
-  /*transform: translateX(-50%)rotate(180deg);*/
-  z-index: 13;
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  pointer-events: auto;
-}
-
-#closeButton {
-  background-image: url('./assets/images/UI/Cancel3x.png');
-  position: absolute;
-  width: 12vmin;
-  height: 12vmin;
-  z-index:13;
-  background-size: 100%;
-  border-radius: 12vmin;
-  background-repeat: no-repeat;
-  background-position: center center;
-  pointer-events: auto;
-}
-
-#closeButton {
-top: 4vmin;
-right: 4vmin;
-}
-
-#resetButton {
-  background-image: url('./assets/images/UI/Reset3x.png');
-  position: absolute;
-  width: 12vmin;
-  height: 12vmin;
-  z-index:13;
-  background-size: 100%;
-  border-radius: 12vmin;
-  background-repeat: no-repeat;
-  background-position: center center;
-  pointer-events: auto;
-}
-
-#resetButton {
-top: 18vmin;
-right: 4vmin;
-}
-
-#mainUIContainer, #expandContainer, #colorUIContainer, #animateUIContainer {
-  overflow:hidden;
+  z-index: 1;
   pointer-events: none;
 }
 
-#colorSelectButton {
+#stopBtn {
+  position: fixed;
+  top: 0%;
+  right: 5%;
+  border: 0;
+  height: 15vmin;
+  background: none;
+  padding: 0;
   pointer-events: auto;
 }
 
-#colorSelectButton.active {
+
+#stopBtn:focus {
+  position: fixed;
+  top: 0%;
+  right: 5%;
+  outline: none !important; 
+  box-shadow: none !important;
   pointer-events: auto;
-  opacity: 1.0;
+
 }
 
-/*#expandButton.active {*/
-/*  transform: translateX(-50%) rotate(180deg);*/
-/*}*/
-/*#expandButton.active {*/
-/*  transform: translateX(-50%);*/
-/*}*/
-#inHandButton, #inSpaceButton {
-  font-family: 'BrandFont-Text';
-  background-size: 80%;
-  background-repeat: no-repeat;
-  pointer-events: auto;
-}
-
-.colorButtonHolder {
-  /*background-image: url('./assets/images/UI/colorSwatchSelected3x_New.png');*/
-  width: 10vmin;
-  height: 10vmin;
-  border-radius: 0px;
-  /*margin-left: 4vmin;
-  margin-top: 20.5vmin;
-  margin-right:10.5vmin;*/
-  z-index: 10;
-  /*border: 0.2em solid white;*/
+#stopImg {
+  width: 15vmin;
+  height: 15vmin;
+  background-image: url(./assets/close.png);
   background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: inline-block;
-  pointer-events: auto;
-}
-
-.colorButton {
-  /*background-image: url('./assets/images/UI/colorSwatchSelected3x_New.png');*/
-  width: 7vmin;
-  height: 7vmin;
-  border-radius: 50px;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  margin-top: 1.13vmin;
-  /*margin-right:10.5vmin;*/
-  z-index: 10;
-  border: 0.1em solid white;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: block;
-  pointer-events: auto;
-}
-
-
-.colorActive {
-  width: 10vmin;
-  height: 10vmin;
-  background-image: url('./assets/images/UI/colorSwatchSelected3x_New.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  opacity: 1.0;
-}
-
-.flipButton, .animButton {
- background-image: url('./assets/images/UI/InhandOptions_Rect3x.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  text-align: left;
-  vertical-align: middle;
-  line-height: 10.6vmin; 
-  padding-left: 1em;
-  font-family: 'BrandFont-Text';
-  color: #FFF;
-  display: inline-block;
-  pointer-events: auto;
-}
-
-.flipButton:active, .animButton:active {
-  background-size: 85%;
-  background-color: white;
-  color: grey;
-}
-
-/*#playVideoButton {
- background-image: url('./assets/images/UI/play-button_1.png');
-  position: absolute;
-  width: 10vmin;
-  height: 10vmin;
-  /*bottom: 3.0vh;
-  left: 35%;
-  transform: translateX(-50%);*/
-  /*z-index:15;
-  background-size: 80%;
-  background-color: blue;
-  /*border-radius: 7.5vmin;*/
-  /*background-repeat: no-repeat;
-  background-position: center center;
-  vertical-align: middle;
-  color: #FFF;
-  pointer-events: auto;
-}*/
-
-#playVideoButtonText {
-  background-image: url('./assets/images/UI/LoadingVideo3x.png');
-  position: absolute;
-  width: 30vmin;
-  height: 5vmin;
-  bottom: 5vmin;
-  left: 8vmin;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  /*transform: translateX(-50%);*/
-  z-index:15;
-  pointer-events: auto;
-  user-select:none;
-}
-
-#playVideoButtonText.loaded {
-  background-image: url('./assets/images/UI/WatchVideo3x.png');
-}
-
-#playVideoButtonText.videoIsPlaying {
-  
-}
-
-@keyframes fadeInFromNone {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  100% {
-    display: block;
-    opacity: 1;
-  }
-}
-
-.explanation {
-  width: 20vmin;
-  height: 10vmin;
-  bottom: 26.5vh;
-  left: 50%;
-  font-size: 100%;
-  color: #FFF;
-  line-height: 20vmin; 
-  font-family: 'BrandFont-Text';
-  margin-left: 5px;
-  vertical-align: middle;
-}
-
-
-@keyframes openMenuPort {
-  0% {
-    height: 12vmin;
-  }
-  100% {
-    height: 65vmin;
-  }
-  
-}
-
-@keyframes closeMenuPort {
-  0% {
-    height: 65vmin;
-  }
-  100% {
-    height: 12vmin;
-  }
-  
-}
-
-@keyframes openMenuLand {
-  0% {
-    width: 12vmin;
-  }
-  100% {
-    width: 75vmin;
-  }
-  
-}
-
-@keyframes closeMenuLand {
-  0% {
-    width: 75vmin;
-  }
-  100% {
-    width: 12vmin;
-  }
-  
-}
-
-@keyframes slideUp {
-  0% {
-    height: 0;
-    bottom: 25vmin;
-  }
-  100% {
-    height: 50vmin;
-    bottom: 0vmin;
-  }
-}
-
-@keyframes slideDown {
-  0% {
-    height: 50vmin;
-    bottom: 0vmin;
-  }
-  100% {
-    height: 0;
-    bottom: 25vmin;
-  }
-}
-
-@keyframes slideMenuUp {
-  0% {
-    height: 0;
-    bottom: 0vmin;
-  }
-  100% {
-    height: 75vmin;
-    bottom: 25vmin;
-  }
-}
-
-@keyframes slideMenuDown {
-  0% {
-    height: 75vmin;
-    bottom: 25vmin;
-  }
-  100% {
-    height: 0;
-    bottom: 0vmin;
-  }
-}
-
-@keyframes slideLeft {
-  0% {
-    width: 75vmax;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes slideRight {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 75vmax;
-  }
-}
-
-@keyframes slideMenuLeft {
-  0% {
-    width: 0;
-    height: 100%;
-    right: 0vmin;
-  }
-  100% {
-    width: 75vmin;
-    height: 100%;
-    right: 25vmin;
-  }
-}
-
-@keyframes slideMenuRight {
-  0% {
-    width: 75vmin;
-    height: 100%;
-    right: 25vmin;
-  }
-  100% {
-    width: 0;
-    height: 100%;
-    right: 0vmin;
-  }
-}
-
-#expandContainer {
-  background-image: url('./assets/images/UI/panel1.png');
-  position: absolute;
-  /*width: 100%;*/
-  /*height: 12vmin;*/
-  /*bottom: 0vmax;*/
-  /*left: 0;*/
-  z-index: 12;
-  background-size: 50%;
-  background-position: center center;
-  
-}
-
-
-#mainUIContainer {
-  position: relative;
-  /*width: 100%;*/
-  /*height: 25vmin;*/
-  /*top: 0vmax;*/
-  /*left: 0vmin;*/
-  z-index: 12;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center; 
-}
-
-/*#infoButton {
-  top: 10vmax;
-  left: 4vmin;
-}*/
-
-
-#verizonLogo {
-  background-image: url('./assets/images/UI/Logo_Square3x_2.png');
-  position: absolute;
-  width: 8.5vmin;
-  height: 10vmin;
-  z-index:13;
-  background-size: 100%;
-  background-color: transparent;
+  background-color: black;
   border-radius: 7.5vmin;
-  background-repeat: no-repeat;
-  background-position: center center;
-  pointer-events: auto;
 }
 
-#colorUIContainer {
-  position: relative;
-  /*width: 100%;*/
-  /*height: 0vmin;*/
-  /*bottom: 15vmin;*/
-  /*left: 0vmin;*/
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
+#expandBtn {
+  margin-top: 1em;
+  margin-right: 1em;
+  float: right;
+  border: 0;
+  background: none;
+  padding: 0;
 }
 
-#colorUIContianer {
-  z-index:11;
+#expandBtn:focus {
+  outline: none !important; 
+  box-shadow: none !important;
 }
 
-#animateUIContainer {
+#expandImg {
+  width: 30px;
+  height: 30px;
+  background-image: url(./assets/expand-icon.svg);
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+  background-size: cover;
+}
+
+#poweredByLogo {
+  width: 30%;
   position: absolute;
-  /*width: 100%;*/
-  /*height: 0vmin;*/
-  /*bottom: 25vmin;*/
-  /*left: 0vmin;*/
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  
-}
-
-#colorSelectButton {
-  position: absolute;
-  bottom: 2.5vmax;
-  transform: translateX(-15%);
-  left: 15%;
-}
-
-#inHandButton{
-  position: absolute;
-  /*left: 50%;*/
-  /*top: 6vh;*/
-  /*transform: translateX(-50%);*/
-  color: white;
-  font-weight: normal;
-  font-size: 1.2em;
-
-  user-select:none
-}
-
-#inSpaceButton{
-  position: absolute;
-  /*left: 4%;*/
-  /*top: 6vh;*/
-  /*transform: translateX(-50%);*/
-  color: white;
-  font-weight: normal;
-  font-size: 1.2em;
-
-  user-select:none
-}
-
-#whiteLine{
-  background-image: url('./assets/images/UI/DividerLine3x.png');
-  position: absolute;
-  /*width: 91%;*/
-  height: 5vmin;
-  /*top: 18.828vmin;*/
-  /*left: 4vmin;*/
-  background-size: 100%;
-  background-color: transparent;
-  border-radius: 7.5vmin;
-  background-repeat: no-repeat;
-  background-position: center center;
-  pointer-events: auto;
-}
-
-#colorText{
-  position: absolute;
-  /*transform: translateX(-50%);*/
-
-  height: 5vmin;
-  font-family: 'BrandFont-Text';
-  color: white;
-  font-weight: normal;
-  font-size: 1em;
-  /*text-align: center;
-vertical-align: middle;
-line-height: 10vmin;*/
-}
-#inSpaceButton.active, #inHandButton.active {
-  font-weight: bolder;
-  border-bottom: 5px solid #BF4C40;
-  padding-bottom: 0.5em;
-}
-
-#subMenuContainer.open {
-  height: 50vmin;
-  bottom:0;
-}
-
-/*#colorUIContainer.open {*/
-/*  animation: slideUp 0.3s ease-in-out;*/
-/*  height: 50vmin;*/
-/*  bottom: 0vmin;*/
-/*}*/
-
-/*#animateUIContainer.open {
-  animation: slideMenuUp 0.3s ease-in-out;
-  height: 75vmin;
-  bottom: 25vmin;
-}*/
-
-#subMenuContainer.close {
-  height: 25vmin;
   bottom: 0;
+  right: 0;
+  z-index: 1;
+  padding: 1em;
 }
 
-
-/*#colorUIContainer.close {*/
-/*  animation: slideDown 0.3s ease-in-out;*/
-/*  height: 0vmin;*/
-/*  bottom: 25vmin;*/
-/*}*/
-
-/*#animateUIContainer.close {
-  animation: slideMenuDown 0.3s ease-in-out;
-  height: 0vmin;
-  bottom: 25vmin;
-}*/
-.colorButton, .flipButton, .animButton{
-  bottom: 50%;
-  display: inline-block;
+.fullscreen-iframeControls {
+  position: fixed !important;
+  top: 0;
 }
 
-/*#defaultInfo {*/
-/*background-image: url('./assets/images/Howto_0013x.png');*/
-/*background-size: 80%;*/
+.fullscreen-iframe {
+  position: fixed !important;
+  height: 100% !important;
+  top: 0;
+  right: 0;
+}
 
-/*}*/
+.fullscreen-btn {
+  position: fixed !important;
+  margin: 0;
+  top: 1em;
+  right: 0;
+}
 
-/*#inHandInfo {*/
-/*background-image: url('./assets/images/Howto_InHand3x.png');*/
-/*background-size: 80%;*/
-/*}*/
+.fullscreen-stop-btn {
+  position: absolute;
 
+}
+
+.fullscreen-btn #expandImg {
+  background-image: url(./assets/shrink-icon.svg) !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Animations */
+
+.fade-in { animation: fade-in 0.25s linear forwards; }
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fade-out { animation: fade-out 0.25s linear forwards; }
+@keyframes fade-out {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+/* Article styling */
+
+body {
+  font-family: 'Noto Serif', serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: 75px auto 75px;
+  grid-template-rows: 50px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.author {
+  margin: 0px;
+}
+
+#date {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+header h1 {
+  font-size: 20px;
+}
+
+header img {
+  max-width: 20px;
+}
+
+.content {
+  padding: 0px 1em;
+}
+
+.content h1 {
+  font-size: 38px;
+  font-style: italic;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5em;
+}
+
+#inline-ar {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media screen and (min-width: 981px) {
+  #inline-ar {
+    display: block;
+    margin: 0 auto;
+    max-width: 675px;
+    max-height: 675px;
+  }
+  
+  #my-iframe {
+    height: 42em;
+  }
+  
+  p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  
+  .content {
+    padding: 0px 10em;
+  }
+  
+  .content h1 {
+    font-size: 4em;
+  }
+  
+  #expandBtn {
+    display: none !important;
+  }
+  
+  #stopBtn {
+    display: none !important;
+  }
+}
+
+/* Prompt Box Styling */
+
+.prompt-button-8w-iframe {
+  border-radius: 10px !important;
+}
 
 @media all and (orientation:portrait) {
-  #defaultInfo {
-    background-image: url('./assets/images/HowitWorks_R013x.png');
-    background-size: 80%;
-    background-position: 50% 30%;
-  }
-
-  #inHandInfo {
-    background-image: url('./assets/images/HowitWorks_023x.png');
-    background-size: 80%;
-    background-position: 40% 20%;
-  }
-
-  #expandButton {
-    top:0;
-    left: 50%;
-    transform: translateX(-50%)rotate(180deg);
-  }
-
-  #inHandButton{
-    left: 50%;
-    top: 6vh;
+  #stopBtn {
+    position: absolute;
+    bottom: 2.5vmax;
+    left: 75%;
     transform: translateX(-50%);
   }
-
-  #inSpaceButton{
-    left: 4%;
-    top: 6vh;
-    /*transform: translateX(-50%);*/
-  }
-
-  #whiteLine {
-    top: 18.828vmin;
-    width: 90%;
-    left: 4vmin;
-  }
-
-  #expandButton.active {
-    transform: translateX(-50%) rotate(0deg);
-  }
-
-  #expandContainer {
-    width: 100%;
-    height: 12vmin;
-    bottom: 0vmax;
-    left: 0;
-  }
-
-  #mainUIContainer {
-    width: 100%;
-    height: 25vmin;
-    top: 0vmax;
-    left: 0vmin;
-  }
-
-  #colorUIContainer,#subMenuContainer {
-    width: 100%;
-    height: 0vmin;
-    bottom: 10vmin;
-    left: 0vmin;
-  }
-
-  #animateUIContainer.show {
-    width: 100%;
-    height: 75vmin;
-    bottom: 25vmin;
-    left: 0vmin;
-  }
-
-  #animateUIContainer.hide {
-    width: 100%;
-    height: 0vmin;
-    bottom: 25vmin;
-    left: 0vmin;
-  }
-  /*#animateUIContainer.open {
-    animation: slideMenuUp 0.3s ease-in-out;
-    height: 75vmin;
-    bottom: 25vmin;
-  }
-  #animateUIContainer.close {
-    animation: slideMenuDown 0.3s ease-in-out;
-    height: 0vmin;
-    bottom: 25vmin;
-  }*/
-
-  #colorUIContainer.open {
-    animation: slideUp 0.3s ease-in-out;
-    height: 50vmin;
-    bottom: 0vmin;
-  }
-
-  #colorUIContainer.close {
-    animation: slideDown 0.3s ease-in-out;
-    height: 0vmin;
-    bottom: 25vmin;
-  }
-  
-  #expandContainer.active {
-    animation: openMenuPort 0.3s ease-in-out;
-    height: 75vmin;
-  }
-
-  #expandContainer.inactive{
-    animation: closeMenuPort 0.3s ease-in-out;
-    height: 10vmin;
-  }
-
-  #verizonLogo {
-  top: 4vmin;
-  left: 4vmin;
-  display:block;
-  }
-  #colorText{
-  left: 4%;
-  top: 18.5vh;
-  }
-
-  .flipButton{
-    width: 25vmin;
-    height: 10.6vmin;
-    margin-left: 4vmin;
-    margin-top: 50vmin;
-    font-size: 100%;
-  }
-
-  .animButton {
-  width: 25vmin;
-  height: 10.6vmin;
-  margin-left: 2vmin;
-  margin-top: 50vmin;
-  font-size: 100%; 
-  }
-
-.colorButtonHolder {
-  margin-left: 4vmin;
-  margin-top: 20.5vmin;
-  margin-right:10.5vmin;
-  }
-
-  #playVideoButtonText {
-  bottom: 5vmin;
-  left: 30%;
-  transform: translateX(-50%);
-  }
-
-  .continueButton {
-  width: 75vmin;
-  height: 75vmin;
-  position: absolute;
-  bottom: -20vmin;
-  left: 50%;
-  transform: translateX(-50%);
-  }
-
-  #infoButton {
-  bottom: 5vmin;
-  right: 25%;
-  }
-  
-  
 }
 
 @media all and (orientation:landscape) {
-  /*.shrink {
-    width: 93%;      
-  }
-  .left {
-    text-align: left;
-    margin: 0 auto;
-  }*/
-  #colorText {
-    left: 4vmin;
-  }
-  #defaultInfo {
-    background-image: url('./assets/images/HowitWorks_L013x.png');
-    background-size: 70%;
-    background-position: 50% 40%;
-  }
-  
-  #inHandInfo {
-    background-image: url('./assets/images/HowitWorks_023x.png');
-    background-size: 30%;
-    background-position: 10% 50%;
-  }
-
-  #expandButton {
-    right:0;
-    top: 50%;
-    transform: translateX(-12.5%)translateY(-50%)rotate(-90deg);
-    /*transform: translateX(-50%) rotate(-90deg);*/
-  }
-
-  #inHandButton{
-    left: 50vmin;
-    top: 3vh;
-    transform: translateX(-50%);
-  }
-
-  #inSpaceButton{
-    left: 4vmin;
-    top: 3vh;
-    /*transform: translateX(-50%);*/
-  }
-  
-  #whiteLine {
-    top: 9.795vmin;
-    left: 4vmin;
-    width: 76%;
-  }
-  
-  #expandButton.active {
-    transform: translateY(-50%) rotate(90deg);
-  }
-
-  #expandContainer {
-    height: 100%;
-    width: 12vmin;
-    top: 0vmax;
-    left: 0;
-  }
-
-  #mainUIContainer {
-    width: 100%;
-    height: 25vmin;
-    top: 0vmax;
-    left: 0vmin;
-  }
-
-  #colorUIContainer,#subMenuContainer {
-    height: 100%;
-    width: 0;
-    left: 0%;
-    top: 10vmin;
-  }
-
-  #animateUIContainer.show {
-    height: 100%;
-    width: 45vmin;
-    left: 0vmin;
-    top: 0vmin;
-  }
-
-  #animateUIContainer.hide {
-    height: 100%;
-    width: 0vmin;
-    left: 0vmin;
-    top: 0vmin;
-  }
-
-  #colorUIContainer.open {
-    animation: slideRight 0.3s ease-in-out;
-    width: 75vmin;
-  }
-
-  #colorUIContainer.close {
-    animation: slideLeft 0.3s ease-in-out;
-    width: 0vmin;
-  }
-
-  /*#animateUIContainer.open {
-    animation: slideRight 0.3s ease-in-out;
-    width: 75vmin;
-  }
-
-  #animateUIContainer.close {
-    animation: slideLeft 0.3s ease-in-out;
-    width: 0vmin;
-  }*/
-  
-  #expandContainer.active {
-    animation: openMenuLand 0.3s ease-in-out;
-    width: 75vmin;
-  }
-
-  #expandContainer{
-    animation: closeMenuLand 0.3s ease-in-out;
-    width: 12vmin;
-  }
-  
-  #verizonLogo {
-  top: 4vmin;
-  /*left: 4vmin;*/
-  left: 0;
-  transform: translateX(25%);
-  display:block;
-  }
-
-  .flipButton {
-  width: 20vmin;
-  height: 10.6vmin;
-  margin-left: 4vmin;
-  margin-top: 14vmin;
-  font-size: 90%;
-  }
-
-  .animButton {
-    width: 18.0vmin;
-    height: 10.6vmin;
-    margin-left: 2vmin;
-    margin-top: 14vmin;
-    font-size: 90%;
-  }
-  .colorButtonHolder {
-  margin-left: 4vmin;
-  margin-top: 5.5vmin;
-  margin-right: 8.5vmin;
-  }
-
-  #playVideoButtonText {
-  bottom: 5.0vh;
-  left: 25%;
-  transform: translateX(-50%);
-  }
-.continueButton {
-  width: 35vw;
-  height: 35vh;
-  position: absolute;
-  bottom: -8vmin;
-  left: 50%;
-  transform: translateX(-50%);
-  }
-  #infoButton{
-  bottom: 5vmin;
-  right: 8vmin;
+  #stopBtn {
+    position: absolute;
+    top: 25%;
+    right: 2vmax;
+    transform: translateY(-50%);
   }
 }
 
+.bg {
+    /*z-index: 0;*/
+  /* The image used */
+  background-/*i*/mage: url("./assets/page.png");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
