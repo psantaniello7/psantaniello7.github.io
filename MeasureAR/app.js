@@ -1,6 +1,6 @@
-import * as THREE from '../../libs/three/three.module.js';
-import { BufferGeometryUtils } from '../../libs/three/jsm/BufferGeometryUtils.js';
-import { ARButton } from '../../libs/ARButton.js';
+import * as THREE from './libs/three/three.module.js';
+import { BufferGeometryUtils } from './libs/three/jsm/BufferGeometryUtils.js';
+import { ARButton } from './libs/ARButton.js';
 import { createNavigation } from './components/Navigation.js'
 import { createListContainer, updateList, getList } from './components/Counter.js'
 
