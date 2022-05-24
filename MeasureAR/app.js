@@ -153,12 +153,8 @@ class App{
                 }
             }
         }
-        setTimeout(()=>{
-            createNavigation(document.getElementById('containerDiv'))
-            createListContainer(document.getElementById('containerDiv'))
-        }, 1000)
-        // createNavigation(document.getElementById('containerDiv'))
-        // createListContainer(document.getElementById('containerDiv'))
+        createNavigation(document.getElementById('containerDiv'))
+        createListContainer(document.getElementById('containerDiv'))
         document.getElementById('add-button').addEventListener('click', onSelect)
         document.getElementById('list-button').addEventListener('click', getList)
         this.controller = this.renderer.xr.getController( 0 );
