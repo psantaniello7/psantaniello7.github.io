@@ -1,6 +1,6 @@
-import * as THREE from './libs/three/three.module.js';
-import { BufferGeometryUtils } from './libs/three/jsm/BufferGeometryUtils.js';
-import { ARButton } from './libs/ARButton.js';
+import * as THREE from '../../libs/three/three.module.js';
+import { BufferGeometryUtils } from '../../libs/three/jsm/BufferGeometryUtils.js';
+import { ARButton } from '../../libs/ARButton.js';
 import { createNavigation } from './components/Navigation.js'
 import { createListContainer, updateList, getList } from './components/Counter.js'
 
@@ -44,6 +44,7 @@ class App{
         
         this.initScene();
         this.setupXR();
+        this.lastPoints= [];
         
         this.renderer.setAnimationLoop( this.render.bind(this) );
 		
@@ -57,11 +58,28 @@ class App{
     }	
     
     getCenterPoint(points) {
-        let line = new THREE.Line3(...points)
+        this.lastPoints = points; //update the latest start and end points
+        let line = new THREE.Line3(...points);
         return line.getCenter( new THREE.Vector3() );
     }
 
-    initLine(point) {
+    findNearestPoint(newPoint,oldPoint) { //if new point is close to old point it will return oldpoint else it will return new point
+        var maxDist = 0.02; //closest difference
+        var diff = parseFloat(newPoint - oldPoint).toFixed(2);
+        return diff >= -maxDist && diff <= maxDist ? oldPoint : newPoint; // if difference b/w old point and newpoint is greater than negative maxDist   or if difference b/w old point and newpoint is lesser than  maxDist, then assign old point else assign new point
+    } 
+
+    initLine(newPoint) { 
+        //check nearest value and assign here
+        //lastpoints[0] => last start point of x,y,z
+        //lastpoints[1] => last end point of x,y,x
+        //if value getted from findNearestPoint is equal to old point, then assign old point else assign new point, checking this condition for both last start and last end points
+        var point = new THREE.Vector3(
+            this.lastPoints.length > 0 && this.findNearestPoint(newPoint.x,this.lastPoints[0].x) == this.lastPoints[0].x ? this.lastPoints[0].x : this.findNearestPoint(newPoint.x,this.lastPoints[1].x) == this.lastPoints[1].x ? this.lastPoints[1].x : newPoint.x,
+            this.lastPoints.length > 0 && this.findNearestPoint(newPoint.y,this.lastPoints[0].y) == this.lastPoints[0].y ? this.lastPoints[0].y : this.findNearestPoint(newPoint.y,this.lastPoints[1].y) == this.lastPoints[1].y ? this.lastPoints[1].y : newPoint.y,
+            this.lastPoints.length > 0 && this.findNearestPoint(newPoint.z,this.lastPoints[0].z) == this.lastPoints[0].z ? this.lastPoints[0].z : this.findNearestPoint(newPoint.z,this.lastPoints[1].z) == this.lastPoints[1].z ? this.lastPoints[1].z : newPoint.z
+        );
+        
         const lineMaterial = new THREE.LineBasicMaterial({
             color: 'blue',
             linewidth: 5,
